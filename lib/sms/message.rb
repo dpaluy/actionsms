@@ -11,12 +11,12 @@ class Sms
     # Should respond_to :deliver_sms
     attr_accessor :delivery_handler
 
-    attr_reader :from, :to, :text
+    attr_reader :from, :to, :text, :encoding
     def initialize(args = {})
       @delivery_handler = Sms
       @perform_deliveries = true
       @raise_delivery_errors = true
-      @from, @to, @text = args[:from], args[:to], args[:text]
+      @from, @to, @text, @encoding = args[:from], args[:to], args[:text], args[:encoding]
     end
 
     # Hash representing the message
