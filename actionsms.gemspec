@@ -6,7 +6,7 @@
 
 Gem::Specification.new do |s|
   s.name = "actionsms"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
@@ -47,4 +47,3 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<jeweler>, [">= 0"])
   end
 end
-
