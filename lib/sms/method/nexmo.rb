@@ -14,8 +14,8 @@ class Sms
       # @param [Sms::Message] sms
       def deliver!(sms)
         from = sms.from || @from
-        encoding = sms.encoding # Encoding type, for example: "unicode"
-        client.send_message(from: from, to: sms.to, text: sms.text, type: encoding)
+        the_type = sms.the_type # Encoding type, for example: "unicode"
+        client.send_message(from: from, to: sms.to, text: sms.text, type: the_type)
       end
 
       private
