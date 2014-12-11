@@ -12,9 +12,10 @@ class Sms
       end
 
       # @param [Sms::Message] sms
-      def deliver!(sms)
+      # @param [encoding] Encoding type, for example: "unicode"
+      def deliver!(sms, the_type = nil)
         from = sms.from || @from
-        client.send_message(from: from, to: sms.to, text: sms.text)
+        client.send_message(from: from, to: sms.to, text: sms.text, type: encoding)
       end
 
       private
